@@ -14,6 +14,10 @@ import { loadApplicationController } from './controllers/application.controller.
 
 import { getDatabase } from './services/database.service.mjs'
 import { KeyStore } from './services/keystore.service.mjs'
+import { loadNoteController } from './controllers/loadNoteController.1.mjs'
+import validator from 'validator';
+
+
 
 
 export async function createApplication({ __rootdir }) {
@@ -25,6 +29,8 @@ export async function createApplication({ __rootdir }) {
 
     app.set('views', path.join(__rootdir, 'views'))
     app.set('view engine', 'ejs')
+
+
 
     app.set('g:db', db)
     app.set('g:ks', ks)
@@ -44,18 +50,21 @@ export async function createApplication({ __rootdir }) {
             httpOnly: true 
         }),
 
-/*
+
         (req, res, next) => {
             console.log('req.session.user', req.session.user)
             next()
         }
-*/
+
     ])
     
     loadHomeController(app)
     loadRegistrationController(app)
     loadSecurityController(app)
     loadApplicationController(app)
+    loadNoteController(app);
 
+
+    
     return app
 }

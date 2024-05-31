@@ -1,5 +1,11 @@
-// Votre travail doit être effectué principalement dans ce fichier ...
+import { loadHomeController } from './home.controller.mjs';
+import { loadRegistrationController } from './registration.controller.mjs';
+import { loadSecurityController } from './security.controller.mjs';
+import { loadNoteController } from './loadNoteController.1.mjs';
 
 export function loadApplicationController(app) {
-    // définir les routes de l'application ici ...
+    
+
+    
+    loadNoteController(app);
 }

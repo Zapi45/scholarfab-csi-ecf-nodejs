@@ -14,6 +14,50 @@
             <a href="/login">Login</a>
             <a href="/register">Register</a>
         <% } %>
+
+        <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Bloc Note</title>
+    <style>
+        /* Ajoutez ici vos styles CSS */
+    </style>
+</head>
+<body>
+    <h1>Mon Bloc Note</h1>
+
+    <form action="/add-note" method="post">
+        <label for="new-note-title">Titre pour ta note</label>
+        <input type="text" id="new-note-title" name="noteTitle" required>
+        <br><br>
+        <label for="new-note-content">Contenu de ma note:</label>
+        <textarea id="new-note-content" name="noteContent" rows="4" cols="50" required></textarea>
+        <br><br>
+        <button type="submit">Ajouter une note</button>
+    </form>
+
+    <ul id="notes-list">
+        <!-- Les notes seront insérées ici dynamiquement -->
+    </ul>
+
+    <div id="note-details">
+        
+    </div>
+
+    <button id="delete-note-btn" disabled>Supprimer la note</button>
+    <button id="read-note-btn" disabled>Lire la note</button>
+
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+           
+            
+        });
+    </script>
+</body>
+</html>
+
     </p>
 </body>
 </html>

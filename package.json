@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
     "cookie-session": "^2.1.0",
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
@@ -24,6 +25,7 @@
     "keygrip": "^1.1.0",
     "morgan": "^1.10.0",
     "nanoid": "^5.0.7",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "validator": "^13.12.0"
   }
 }
